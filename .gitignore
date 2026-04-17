@@ -7,3 +7,4 @@ Cargo.lock
 *.so
 *.png
 *.a
+vtk_out/
