@@ -17,11 +17,11 @@ $$
 From this potential, the first-order acoustic fields are:
 
 $$
-p_1(\mathbf{r}) = i \omega \rho_0 , \phi(\mathbf{r})
+p_1(\mathbf{r}) = i \omega \rho_0 \, \phi(\mathbf{r})
 $$
 
 $$
-\rho_1(\mathbf{r}) = i \frac{\omega \rho_0}{c_0^2} , \phi(\mathbf{r})
+\rho_1(\mathbf{r}) = i \frac{\omega \rho_0}{c_0^2} \, \phi(\mathbf{r})
 $$
 
 $$
@@ -44,14 +44,14 @@ $$ U(\mathbf{r}) = \frac{\epsilon_p^3 \pi \rho_0}{k} \left[\frac{f_0}{3} |\phi(\
 
 ---
 
-# 3. What This Means Physically
+## 3. What This Means Physically
 
 * **Primary radiation force** → interaction with external wave
 * **Secondary radiation force** → interaction via scattered waves
 
 ---
 
-# 4. What We Changed (Key Implementation Shift)
+## 4. What We Changed (Key Implementation Shift)
 
 The paper works in **complex harmonic form** using:
 
@@ -71,7 +71,7 @@ Instead, we:
 2. Work directly with **real-valued fields**
 
 ---
-# 4.1 Why We Can Avoid $\phi$
+### 4.1 Why We Can Avoid $\phi$
 
 Even though the paper is formulated in terms of the velocity potential $\phi$,
 the radiation force depends only on **quadratic, time-averaged quantities**:
@@ -100,7 +100,7 @@ $$
 p, \quad \mathbf{v}
 $$
 
-# 5. Our Assumed Acoustic Field
+## 5. Our Assumed Acoustic Field
 
 We assume a **standing wave**:
 
@@ -116,7 +116,7 @@ $$
 
 ---
 
-# 6. Time Averaging (Key Step)
+## 6. Time Averaging (Key Step)
 
 The radiation force depends on **time-averaged quadratic terms**:
 
@@ -130,7 +130,7 @@ $$
 
 ---
 
-# 7. Equivalent Radiation Potential (Our Form)
+## 7. Equivalent Radiation Potential (Our Form)
 
 Instead of using $\phi$, we rewrite:
 
@@ -147,7 +147,7 @@ $$
 
 ---
 
-# 8. Radiation Force (Final Computable Form)
+## 8. Radiation Force (Final Computable Form)
 
 $$
 \mathbf{F}^{rad} = -\nabla U
@@ -169,12 +169,12 @@ Fy = -dU/dy
 
 ---
 
-# 9. Particle Dynamics (Overdamped Regime)
+## 9. Particle Dynamics (Overdamped Regime)
 
 At microscale:
 
 $$
-6\pi \mu a , \mathbf{v}_p = \mathbf{F}^{rad}
+6\pi \mu a \, \mathbf{v}_p = \mathbf{F}^{rad}
 $$
 
 So:
@@ -197,7 +197,7 @@ y += vy * dt
 
 ---
 
-# 10. Physical Interpretation of the Force
+## 10. Physical Interpretation of the Force
 
 For a standing wave:
 
@@ -217,7 +217,7 @@ Particles move toward:
 
 This is the origin of acoustic trapping.
 
-# 11. Summary of Differences
+## 11. Summary of Differences
 
 | Paper                        | Implementation                |
 | ---------------------------- | ----------------------------- |
@@ -228,7 +228,7 @@ This is the origin of acoustic trapping.
 
 ---
 
-# 13. Final Pipeline
+## 13. Final Pipeline
 
 1. Define standing wave:
    $$
@@ -262,7 +262,7 @@ This is the origin of acoustic trapping.
 
 ---
 
-# 🔥 Final Insight
+## 🔥 Final Insight
 
 $$
 \boxed{
