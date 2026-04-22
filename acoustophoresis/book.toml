@@ -1,0 +1,6 @@
+[book]
+authors = ["dineshadepu"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Acoustophoresis"
