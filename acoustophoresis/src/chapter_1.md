@@ -71,6 +71,34 @@ Instead, we:
 2. Work directly with **real-valued fields**
 
 ---
+# 4.1 Why We Can Avoid $\phi$
+
+Even though the paper is formulated in terms of the velocity potential $\phi$,
+the radiation force depends only on **quadratic, time-averaged quantities**:
+
+$$
+|\phi|^2 \quad \text{and} \quad |\nabla \phi|^2
+$$
+
+Using the relations:
+
+$$
+p_1 = i \omega \rho_0 \phi, \quad
+\mathbf{v}_1 = \nabla \phi
+$$
+
+we can rewrite everything in terms of **measurable real fields**:
+
+$$
+|\phi|^2 \propto \langle p_1^2 \rangle, \quad
+|\nabla \phi|^2 \propto \langle v_1^2 \rangle
+$$
+
+Thus, we completely eliminate $\phi$ and work directly with:
+
+$$
+p, \quad \mathbf{v}
+$$
 
 # 5. Our Assumed Acoustic Field
 
@@ -169,6 +197,26 @@ y += vy * dt
 
 ---
 
+# 10. Physical Interpretation of the Force
+
+For a standing wave:
+
+$$
+U(x) \propto \cos^2(kx) \quad \text{and} \quad \sin^2(kx)
+$$
+
+Thus:
+
+- Pressure nodes: $\cos(kx) = 0$
+- Velocity nodes: $\sin(kx) = 0$
+
+Particles move toward:
+
+- **Pressure nodes** if $f_0 > 0$
+- **Pressure antinodes** if $f_0 < 0$
+
+This is the origin of acoustic trapping.
+
 # 11. Summary of Differences
 
 | Paper                        | Implementation                |
@@ -229,10 +277,3 @@ $$
 $$
 
 ---
-
-If you want next, I can:
-
-* convert this into **clean mdbook chapter format**
-* or add **figures (node/antinode, force fields, particle motion)**
-
-This is already very strong documentation 👍
